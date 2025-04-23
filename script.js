@@ -128,6 +128,10 @@ const updateInterface = (cashAmount) => {
 // Interactivity
 
 purchaseBtn.addEventListener("click", () => {
+  if (!cashInput.value) {
+    alert("Please provide an input");
+    return;
+  }
   purchaseSound.play(); 
   const cashAmount = parseFloat(cashInput.value);
   resetState();
