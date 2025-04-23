@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="logo">
+          <canvas></canvas>
+          <span>jeffamazed</span>
+        </div>
+        <h1>Cash Register Project</h1>
+      </header>
+      <main>
+        <div id="change-due" class="change-due" aria-live="polite"></div>
+        <div class="user-container">
+          <label for="cash">Enter cash from customer:</label>
+          <input id="cash" type="number" min="0" name="cash" step="any" />
+          <button id="purchase-btn" class="purchase-btn" aria-label="Purchase">
+            Purchase
+          </button>
+        </div>
+        <div class="cash-register">
+          <div class="monitor">
+            <div class="monitor-screen">
+              <span>Total: $<span id="total-price"></span></span>
+            </div>
+          </div>
+          <div class="monitor-pole"></div>
+          <div class="cash-register-base">
+            <div class="cash-register-buttons-container">
+              <button class="cash-register-button" onclick="insertNum('1')" aria-label="one">1</button>
+              <button class="cash-register-button" onclick="insertNum('2')" aria-label="two">2</button>
+              <button class="cash-register-button" onclick="insertNum('3')" aria-label="three">3</button>
+              <button class="cash-register-button" onclick="insertNum('4')" aria-label="four">4</button>
+              <button class="cash-register-button" onclick="insertNum('5')" aria-label="five">5</button>
+              <button class="cash-register-button" onclick="insertNum('6')" aria-label="six">6</button>
+              <button class="cash-register-button" onclick="insertNum('7')" aria-label="seven">7</button>
+              <button class="cash-register-button" onclick="insertNum('8')" aria-label="eight">8</button>
+              <button class="cash-register-button" onclick="insertNum('9')" aria-label="nine">9</button>
+              <button class="cash-register-button clear" onclick="clearInput()" aria-label="clear">
+                Clear
+                <i class="fas fa-circle-xmark"></i>
+              </button>
+              <button id="enter-btn" class="cash-register-button enter" aria-label="enter">
+                Enter
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="cid-monitor">
+              <p><strong>Change in drawer:</strong></p>
+              <ul>
+                <li>Pennies: $<span class="cash-unit"></span></li>
+                <li>Nickels: $<span class="cash-unit"></span></li>
+                <li>Dimes: $<span class="cash-unit"></span></li>
+                <li>Quarters: $<span class="cash-unit"></span></li>
+                <li>Ones: $<span class="cash-unit"></span></li>
+                <li>Fives: $<span class="cash-unit"></span></li>
+                <li>Tens: $<span class="cash-unit"></span></li>
+                <li>Twenties: $<span class="cash-unit"></span></li>
+                <li>Hundreds: $<span class="cash-unit"></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cash-register-drawer">
+            <div class="drawer-handle"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

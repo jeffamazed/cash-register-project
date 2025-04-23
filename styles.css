@@ -1,0 +1,262 @@
+*, ::before, ::after {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #1e1e1e;
+  --button-color: #28a745;
+  --button-color2: #20973e;
+  --monitor-color: #080808;
+  --cash-register-color: #B0BEC5;
+  --cash-register-color2: #7d8589;
+  --cash-register-button-color: #252728;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 25px 10px 50px;
+}
+
+header, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+header {
+  margin-bottom: 15px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo span {
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+canvas {
+  border-radius: 50%;
+}
+
+.change-due {
+  text-align: left;
+}
+
+.change-due p {
+  margin-bottom: 5px;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-container label, .user-container input, .purchase-btn, .cash-register, .change-due {
+  font-size: 2rem;
+}
+
+.user-container input {
+  width: 120px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 3px;
+}
+
+.purchase-btn {
+  padding: 3px 12px;
+  margin-top: 15px;
+  background-color: var(--button-color);
+  border-top: 2px solid #3ff96a;
+  border-left: 2px solid #3ff96a;
+  border-right: 2px solid #195f29;
+  border-bottom: 2px solid #195f29;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; 
+}
+
+.purchase-btn:hover {
+  cursor: pointer;
+  background-color: var(--button-color2);
+}
+
+.purchase-btn:active {
+  background-color: var(--button-color);
+}
+
+/* CASH REGISTER */
+
+.cash-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.monitor {
+  background: linear-gradient(135deg, var(--cash-register-color), var(--cash-register-color2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
+  border-right: 2px solid #7d7d7d;
+  border-bottom: 2px solid #7d7d7d;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.monitor-screen {
+  background-color: var(--monitor-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 5px 30px;
+}
+
+.monitor-pole {
+  width: 25px;
+  height: 30px;
+  background: linear-gradient(135deg, var(--cash-register-color), var(--cash-register-color2));
+  border-left: 2px solid #d9d9d9;
+  border-right: 2px solid #7d7d7d;
+}
+
+.cash-register-base {
+  width: 300px;
+  height: 270px;
+  background: linear-gradient(135deg, var(--cash-register-color), var(--cash-register-color2));
+  border-top: 2px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
+  border-right: 2px solid #7d7d7d;
+  border-bottom: 2px solid #7d7d7d;
+  border-radius: 25px 25px 2px 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.cash-register-drawer {
+  width: 300px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--cash-register-color), var(--cash-register-color2));
+  border-top: 2px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
+  border-right: 2px solid #7d7d7d;
+  border-bottom: 2px solid #7d7d7d;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawer-handle {
+  width: 25px;
+  height: 8px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.cash-register-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  grid-template-rows: repeat(5, 30px);
+  gap: 5px;
+}
+
+.cash-register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--cash-register-button-color);
+  border-top: 1px solid #4b4f51;
+  border-left: 1px solid #4b4f51;
+  border-right: 1px solid #171819;
+  border-bottom: 1px solid #171819;
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cash-register-button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.cash-register-button:active {
+  background-color: var(--cash-register-button-color);
+}
+
+.clear, .enter {
+  grid-column: 1 / -1;
+}
+
+.cid-monitor {
+  width: 150px;
+  height: 100%;
+  background-color: var(--monitor-color);
+  border-radius: 2px;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.cid-monitor ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.cid-monitor li {
+  margin-top: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .user-container label, .user-container input, .purchase-btn, .change-due {
+  font-size: 2.2rem;
+  }
+
+  .cash-register {
+    transform: scale(1.05);
+  }
+}
+
+
+
