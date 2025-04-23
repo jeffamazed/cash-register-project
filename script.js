@@ -129,6 +129,7 @@ const updateInterface = (cashAmount) => {
 
 purchaseBtn.addEventListener("click", () => {
   purchaseSound.play();
+  resetState();
   const cashAmount = parseFloat(cashInput.value);
   if (price > cashAmount) {
     alert("Customer does not have enough money to purchase the item");
