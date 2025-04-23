@@ -128,9 +128,9 @@ const updateInterface = (cashAmount) => {
 // Interactivity
 
 purchaseBtn.addEventListener("click", () => {
-  purchaseSound.play();
-  resetState();
+  purchaseSound.play(); 
   const cashAmount = parseFloat(cashInput.value);
+  resetState();
   if (price > cashAmount) {
     alert("Customer does not have enough money to purchase the item");
     return;
@@ -141,8 +141,6 @@ purchaseBtn.addEventListener("click", () => {
     updateCashUnitsSpan(cid);
   }
 });
-
-
 
 cashInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
